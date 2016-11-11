@@ -33,7 +33,7 @@ User can:
 * A user can search through the jobs listing by: jobs applied, level of interest or date.
 
 ## Model Used
-
+```
 JobSchema{
   position: String,
   company: String,
@@ -44,3 +44,4 @@ JobSchema{
   updatedAt: Date,
   notes: String
 }
+```
