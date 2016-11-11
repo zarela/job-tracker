@@ -48,7 +48,7 @@ router.post('/', function(req, res){
   .then(function(){
     return Job.find({}).exec();
   })
-  .then(function(todos){
+  .then(function(jobs){
     console.log('All jobs so far --->', jobs)
     res.json({jobs: jobs, job: newJob});
   })
@@ -57,7 +57,39 @@ router.post('/', function(req, res){
   })
 });
 
+//Updating a job
+router.put('/:jobId', function(req, res){
+  var editedJob;
 
+  Job.update({_id: req.params.jobId}, req.body)
+  .then(function(){
+    return Job.find({}).exec();
+  })
+  .then(function(jobs){
+    console.log('All jobs --->', jobs);
+    res.json({message: "Successfully Updated", jobs: jobs})
+  })
+  .catch(function(err){
+    res.json(400, err)
+  });
+})
 
+//Deleting a job
+router.delete('/:jobId', function(req, res){
+  var jobs;
+
+  var query = Job.remove({_id: req.params.jobId})
+    query.then(function(){
+      return Job.find({}).exec();
+    })
+    .then(function(jobs){
+      console.log('All jobs --->', jobs)
+
+      res.json({message: "Successfully Deleted", jobs: jobs})
+    })
+    .catch(function(err){
+      res.json(400, err)
+    });
+});
 
 module.exports = router;

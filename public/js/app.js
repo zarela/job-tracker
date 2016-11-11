@@ -77,7 +77,8 @@ function editJob(job){
   this.isEditing = false;
 }
 
- //PUBLIC METHODS
+ //Public Methods
+ //==============================
 this.startCreating = startCreating;
 this.addJob = addJob;
 this.deleteJob = deleteJob;
