@@ -2,16 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Job Trail</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link href="js/app.js" media="screen" title="Angular Connection">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="js/app.js"></script>
   </head>
   <body ng-app="job">
+
     <div ng-controller="MainCtrl as main">
       {{1+1}}
-      <!-- {{main.jobs}} -->
       <div class="jobs">
         <div class="job" ng-repeat="job in main.jobs">
           <div>
@@ -49,9 +49,9 @@
           <div>
             <label for="interestLevel">Level of Interest</label>
             <input type="radio" name="interestLevel" value="1" ng-model="newJob.interestLevel"> 1
-            <input type="radio" name="interestLevel" value="5" ng-model="newJob.interestLevel"> 2
-            <input type="radio" name="interestLevel" value="10" ng-model="newJob.interestLevel"> 3
-            <input type="radio" name="interestLevel" value="1" ng-model="newJob.interestLevel"> 4
+            <input type="radio" name="interestLevel" value="2" ng-model="newJob.interestLevel"> 2
+            <input type="radio" name="interestLevel" value="3" ng-model="newJob.interestLevel"> 3
+            <input type="radio" name="interestLevel" value="4" ng-model="newJob.interestLevel"> 4
             <input type="radio" name="interestLevel" value="5" ng-model="newJob.interestLevel"> 5
           </div>
           <div>
@@ -65,9 +65,41 @@
           <button type="submit">Create Job</button>
         </form>
         <button ng-click"main.reset(newJob)">RESET</button>
+     </div>
+
+      <div class="form" ng-show="main.isEditing">
+        <form action="#"ng-submit="main.editJob(main.editedJob)">
+          <div>
+            <label for="position">Position</label>
+            <input type="text" ng-model="main.editedJob.position">
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input type="text" ng-model="main.editedJob.company">
+          </div>
+          <div>
+            <label for="jobLink">Job Link</label>
+            <input type="text" ng-model="main.editedJob.jobLink">
+          </div>
+          <div>
+            <label for="interestLevel">Level of Interest</label>
+            <input type="radio" name="interestLevel" value="1" ng-model="main.editedJob.interestLevel"> 1
+            <input type="radio" name="interestLevel" value="2" ng-model="main.editedJob.interestLevel"> 2
+            <input type="radio" name="interestLevel" value="3" ng-model="main.editedJob.interestLevel"> 3
+            <input type="radio" name="interestLevel" value="4" ng-model="main.editedJob.interestLevel"> 4
+            <input type="radio" name="interestLevel" value="5" ng-model="main.editedJob.interestLevel"> 5
+          </div>
+          <div>
+            <label for="applied">Applied?</label>
+            <input type="checkbox" ng-model="main.editedJob.applied" value="true" checked>
+          </div>
+          <div>
+            <label for="notes">Notes</label>
+            <input type="text" ng-model="main.editedJob.notes">
+          </div>
+          <button type="submit">EDIT</button>
+        </form>
       </div>
-
-
     </div>
   </body>
 </html>
