@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/jobs', require('./controller/jobs.js')); //********
+app.use('/jobs', require('./controllers/jobs.js')); //********
 
 //DATABASE CONNECTION
 //====================================
