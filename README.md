@@ -15,3 +15,32 @@ The user should be able to add new jobs, edit them or delete them if is not long
 ## Original Wireframe
 
 ![alt tag](http://i.imgur.com/6s24kqe.png?3)
+
+## User Stories
+
+User can:
+* Add new jobs to the user page
+* Save relevant links to job post
+* Edit the elements of the job listing
+* Delete jobs no longer are of his/her interest
+* Identify which jobs have been applied to
+* Rate jobs depending on level of interest
+* Add extra notes to each job posting
+
+## Stretch Goals (wish list)
+
+* Add links to professional profiles such as LinkedIn, Resume, GA Profile so user can copy and paste when applying to a job.
+* A user can search through the jobs listing by: jobs applied, level of interest or date.
+
+## Model Used
+
+JobSchema{
+  position: String,
+  company: String,
+  jobLink:  String,
+  interestLevel: Number,
+  applied: Boolean,
+  createdAt: Date,
+  updatedAt: Date,
+  notes: String
+}
