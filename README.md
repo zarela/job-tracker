@@ -14,7 +14,7 @@ The user should be able to add new jobs, edit them or delete them if is not long
 
 ## Original Wireframe
 
-![alt tag](http://i.imgur.com/QyjhebJ.png)
+![alt tag](http://i.imgur.com/QyjhebJ.png?1)
 
 ## User Stories
 
