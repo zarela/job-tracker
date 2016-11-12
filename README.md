@@ -24,7 +24,6 @@ User can:
 * Edit the elements of the job listing
 * Delete jobs no longer are of his/her interest
 * Identify which jobs have been applied to
-* Rate jobs depending on level of interest
 * Add extra notes to each job posting
 
 ## Stretch Goals (wish list)
@@ -38,10 +37,8 @@ JobSchema{
   position: String,
   company: String,
   jobLink:  String,
-  interestLevel: Number,
   applied: Boolean,
   createdAt: Date,
-  updatedAt: Date,
   notes: String
 }
 ```
