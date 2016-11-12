@@ -6,7 +6,7 @@
 
     $http.get('/jobs')
     .then(function(response){
-      console.log("Self works")
+      // console.log("Self works")
       self.jobs = response.data.jobs
     })
     .catch(function(err){
@@ -38,18 +38,23 @@
     this.isEditing = false;
   }
 
-  //CRUD Logic
+  //CRUD LOGIC
   //==========================
 
   //NEW JOB
   function addJob(newJob){
-    console.log(newJob);
+    // console.log(newJob);
 
     $http.post('/jobs', newJob)
     .then(function(response){
-      console.log(response)
+      // console.log(response)
       self.jobs = response.data.jobs;
-      newJob.description = '';
+      //Clearing form ''
+      newJob.position = '';
+      newJob.company = '';
+      newJob.jobLink = '';
+      newJob.applied = false;
+      newJob.notes = '';
     })
     .catch(function(err){
       console.log(err)

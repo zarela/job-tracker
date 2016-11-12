@@ -1,6 +1,4 @@
-/*body{
-  background-color:pink;
-}*/
+
 .jobs {
   display: flex;
   justify-content: space-between;
@@ -8,7 +6,7 @@
   flex-direction: row;
 }
 
-.jobs {
+.job {
   margin: 10px;
   color: #555;
   font-size: 11px;
