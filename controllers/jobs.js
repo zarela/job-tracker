@@ -35,7 +35,6 @@ router.post('/', function(req, res){
     position: req.body.position,
     company: req.body.company,
     jobLink: req.body.jobLink,
-    interestLevel: req.body.interestLevel,
     applied: req.body.applied || false,
     createdAt: new Date(),
     updatedAt: new Date(),
