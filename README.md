@@ -1,7 +1,7 @@
 # job-tracker
 Job search tracker application
 
-# GA WDIR Mini Project: Job Trail
+# GA WDIR MEAN Project: Job Trail
 
 [Heroku Link] (Link)
 
