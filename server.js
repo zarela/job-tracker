@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/jobs', require('./controllers/jobs.js')); //********
+app.use('/jobs', require('./controllers/jobs.js'));
 
 //DATABASE CONNECTION
 //====================================
@@ -29,6 +29,13 @@ mongoose.connect(mongoURI);
 app.get('/', function(req, res){
     res.render('index');
 });
+
+// //*********************
+// //This allows $locationProvider to work without #
+app.all('/*', function(req, res, next) {
+  res.sendFile('/public/index.html', { root: __dirname });
+});
+//********************
 
 //PORT LISTENER
 //=======================================

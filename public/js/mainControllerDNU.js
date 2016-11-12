@@ -1,16 +1,17 @@
 (function(){
-  angular.module('job', []).controller('MainCtrl', function($http){
+  angular.module('job')
+  .controller('MainCtrl', function($http, $state){
 
-  var self = this;
+    var self = this;
 
-  $http.get('/jobs')
-  .then(function(response){
-    console.log("Self works")
-    self.jobs = response.data.jobs
-  })
-  .catch(function(err){
-    console.log(err)
-  });
+    $http.get('/jobs')
+    .then(function(response){
+      console.log("Self works")
+      self.jobs = response.data.jobs
+    })
+    .catch(function(err){
+      console.log(err)
+    });
 
   //Keeping Track of App State
   //============================
@@ -86,5 +87,6 @@
   this.editJob = editJob;
   this.reset = reset;
 
-  }); //End
+  });
+
 })();

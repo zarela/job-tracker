@@ -10,16 +10,15 @@
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: "home.html",
+    templateUrl: "homeDNU.html",
   })
 
-
-  $urlRouterProvider.otherwise('/')
+  $urlRouterProvider.otherwise('/');
 
   $locationProvider.html5Mode({
     enabled: true,
     requireBase: false
-  }); //locationProvider
+  }); //end of locationProvider
 
-  }; //end of routes
+  } //end of routes
 })();
