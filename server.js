@@ -27,7 +27,7 @@ mongoose.connect(mongoURI);
 //CHECKING CONNECTION
 //===================================
 app.get('/', function(req, res){
-    res.send('index');
+    res.render('index');
 });
 
 //PORT LISTENER
