@@ -45,7 +45,7 @@
   function addJob(newJob){
     // console.log(newJob);
 
-    // $http.post('/jobs', newJob)
+    // $http.post('/jobs', newJob) //Used to add job on homepage
     $http.post('/jobs/new', newJob)
     .then(function(response){
       // console.log(response)
@@ -56,9 +56,7 @@
       newJob.jobLink = '';
       newJob.applied = false;
       newJob.notes = '';
-      //====
       $state.go('home', {url: '/home'});
-      //====
     })
     .catch(function(err){
       console.log(err)

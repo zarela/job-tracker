@@ -30,12 +30,10 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
-// //*********************
-// //This allows $locationProvider to work without #
+//Allows $locationProvider to work without #
 app.all('/*', function(req, res, next) {
   res.sendFile('/public/index.html', { root: __dirname });
 });
-//********************
 
 //PORT LISTENER
 //=======================================

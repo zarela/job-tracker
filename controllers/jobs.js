@@ -27,9 +27,9 @@ router.get('/:jobId', function(req, res){
   });
 });
 
-//Creating a new job
-// router.post('/', function(req, res){
-router.post('/new', function(req, res){ //******
+//CREATING A NEW JOB
+// router.post('/', function(req, res){ //This will display on home page
+router.post('/new', function(req, res){ //This displays on "new" page
   var newJob;
 
   Job.create({
@@ -57,7 +57,7 @@ router.post('/new', function(req, res){ //******
   })
 });
 
-//Updating a job
+//UPDATING A JOB
 router.put('/:jobId', function(req, res){
   var editedJob;
 
@@ -74,7 +74,7 @@ router.put('/:jobId', function(req, res){
   });
 })
 
-//Deleting a job
+//DELETING A JOB
 router.delete('/:jobId', function(req, res){
   var jobs;
 
@@ -83,7 +83,7 @@ router.delete('/:jobId', function(req, res){
       return Job.find({}).exec();
     })
     .then(function(jobs){
-      console.log('All jobs --->', jobs)
+      console.log('Jobs left --->', jobs)
 
       res.json({message: "Successfully Deleted", jobs: jobs})
     })

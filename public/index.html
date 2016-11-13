@@ -13,17 +13,24 @@
     <script src="js/app.js"></script>
     <script src="js/mainController.js"></script>
   </head>
+
   <body ng-app="job">
 
     <div id="sticky-header">
       <!-- <img src="http://i.imgur.com/JHt7fYY.png" style="width:200px;" /> -->
-      <img src="http://i.imgur.com/RyJS9DP.png" style="width:200px;" />
+      <img src="http://i.imgur.com/h4YRPYt.png" style="width:600px;" ui-sref="home" />
     </div>
-
     <!-- {{1+1}} -->
     <div ng-controller="MainCtrl as main">
       <main ui-view></main>
     </div>
+    <div class="empty"></div>
 
   </body>
+
+  <footer>
+    <img src="http://i.imgur.com/5n0dCyQ.png" style="width:60px;" ui-sref="home"/><br>
+    Created by &#10084; Zarela G.
+  </footer>
+
 </html>
