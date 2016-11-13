@@ -17,6 +17,14 @@
   <button ng-click="main.startCreating()">Add Job</button>
 </div>
 
+
+<div>
+  <em>{{newJob.position}}</em><br>
+  <em>{{newJob.company}}</em><br>
+  <em>{{newJob.jobLink}}</em><br>
+</div>
+
+
 <div ng-show="main.isCreating" class="form">
   <form ng-submit="main.addJob(newJob)">
     <div>
