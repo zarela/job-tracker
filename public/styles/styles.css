@@ -11,6 +11,9 @@
   display: block;
   width: 100%;
 }
+.empty{
+  height: 100px;
+}
 
 .jobs {
   display: flex;
@@ -24,17 +27,15 @@
   color: #555;
   font-size: 14px;
   font-weight: 600;
-  line-height: 20px;
-  /*line-height: 38px;*/
+  line-height: 18px;
+  /*background-color: #1f3461;*/
   letter-spacing: .1rem;
-  border: 1px solid #DDD;
+  border: 2px solid #1f3461;
   border-radius: 10px;
   padding: 1em;
+  /*box-shadow: 9px 9px 5px #888888;*/
+  box-shadow: 3px 3px 3px #888888;
 }
-
-/*p {
-  margin: 0px
-}*/
 
 .nav {
   text-align: center;
@@ -69,8 +70,9 @@ button {
   text-transform: uppercase;
   background-color: #1f3461;
   border-radius: 8px;
-  border: 1px solid #bbb;
+  border: 1px solid #1f3461;
   cursor: pointer;
+  box-shadow:3px 3px 3px #888888;
 }
 
 form {

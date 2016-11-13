@@ -28,7 +28,8 @@ router.get('/:jobId', function(req, res){
 });
 
 //Creating a new job
-router.post('/', function(req, res){
+// router.post('/', function(req, res){
+router.post('/new', function(req, res){ //******
   var newJob;
 
   Job.create({

@@ -1,3 +1,4 @@
+<div class="empty"></div>
 <div class="jobs">
   <div class="job" ng-repeat="job in main.jobs">
     <div>
@@ -12,18 +13,21 @@
       <button ng-click="main.deleteJob(job._id)">DELETE</button>
   </div>
 </div>
-<div class="nav" ng-hide="main.isCreating || main.isEditing">
-  <button ng-click="main.startCreating()">Add Job</button>
+<!-- <div class="nav" ng-hide="main.isCreating || main.isEditing"> -->
+<div class="nav" ng-hide="main.isEditing" ng-show="main.isCreating">
+  <!-- <button ng-click="main.startCreating()">Add Job</button> -->
+  <!-- This is my try to move to another page -->
+  <button ui-sref="new" ng-click="main.startCreating()">Add Job</button>
 </div>
 
 
-<div>
+<!-- <div>
   <em>{{newJob.position}}</em><br>
   <em>{{newJob.company}}</em><br>
   <em>{{newJob.jobLink}}</em><br>
-</div>
+</div> -->
 
-<div ng-show="main.isCreating" class="form">
+<!-- <div ng-show="main.isCreating" class="form">
   <form ng-submit="main.addJob(newJob)">
     <div>
       <label for="position">Position</label>
@@ -48,7 +52,7 @@
     <button type="submit">Create Job</button>
   </form>
   <button ng-click="main.reset(newJob)">RESET</button>
-</div>
+</div> -->
 
 
 

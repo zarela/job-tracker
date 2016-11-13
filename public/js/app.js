@@ -12,6 +12,10 @@
     url: '/',
     templateUrl: "home.html",
   })
+  .state('new', {
+    url: '/new',
+    templateUrl: "new.html",
+  })
 
   $urlRouterProvider.otherwise('/');
 

@@ -45,7 +45,8 @@
   function addJob(newJob){
     // console.log(newJob);
 
-    $http.post('/jobs', newJob)
+    // $http.post('/jobs', newJob)
+    $http.post('/jobs/new', newJob)
     .then(function(response){
       // console.log(response)
       self.jobs = response.data.jobs;
@@ -55,6 +56,9 @@
       newJob.jobLink = '';
       newJob.applied = false;
       newJob.notes = '';
+      //====
+      $state.go('home', {url: '/home'});
+      //====
     })
     .catch(function(err){
       console.log(err)
