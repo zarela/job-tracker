@@ -37,7 +37,7 @@ app.all('/*', function(req, res, next) {
 
 //PORT LISTENER
 //=======================================
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("========================");
   console.log('RUNNING on PORT ' + port);
   console.log("=======================");
