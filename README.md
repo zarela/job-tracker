@@ -1,7 +1,5 @@
-# job-tracker
-Job search tracker application
-
-# GA WDIR MEAN Project: Job Trail
+# MEAN Stack Application: Job Trail
+A job tracker app using Node.js, Express, MongoDB, AngularJS, and all four HTTP methods for RESTful Services
 
 [Heroku Link] (https://jobtrail.herokuapp.com/)
 
