@@ -1,6 +1,6 @@
 <div class="empty"></div>
-<input class="search" type="text" name="search" placeholder="Search .." ng-model="searchBox">
-<br><br>
+<input class="search" type="text" name="search" placeholder="Search" ng-model="searchBox">
+<br>
 <div class="jobs">
   <div class="job" ng-repeat="job in main.jobs | filter: searchBox">
   <!-- <div class="job" ng-repeat="job in main.jobs"> -->
@@ -24,6 +24,7 @@
   <button ui-sref="new" ng-click="main.startCreating()">Add Job</button>
 </div>
 
+<!-- Code to ADD a JOB in this same page -->
 <!-- <div ng-show="main.isCreating" class="form">
   <form ng-submit="main.addJob(newJob)">
     <div>

@@ -93,10 +93,12 @@ input {
 button {
   display: inline-block;
   height: 38px;
-  padding: 0 30px;
+  /*padding: 0 30px;*/
+  padding: 0 40px;
   text-align: center;
   color: #fcfce8;
-  font-size: 12px;
+  font-size: 13px;
+  font-family: 'Lato', sans-serif;
   line-height: 38px;
   letter-spacing: .1rem;
   text-transform: uppercase;
@@ -113,13 +115,17 @@ form {
 }
 
 .search[type=text] {
+  font-size: 12px;
   width: 130px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 .search[type=text]:focus {
-    width: 100%;
+    width: 30%;
 }
 
 body{
