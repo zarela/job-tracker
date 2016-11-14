@@ -25,6 +25,7 @@ User can:
 * Delete jobs no longer are of his/her interest
 * Identify which jobs have been applied to
 * Add extra notes to each job posting
+* User can search by any word
 
 ## Stretch Goals (wish list)
 
@@ -43,3 +44,5 @@ JobSchema{
   notes: String
 }
 ```
+## Copyrights
+Logos are created by me and are saved in a images folder and also hosted on Imgur. 
