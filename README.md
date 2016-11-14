@@ -3,7 +3,7 @@ Job search tracker application
 
 # GA WDIR MEAN Project: Job Trail
 
-[Heroku Link] (Link)
+[Heroku Link] (https://jobtrail.herokuapp.com/)
 
 ## App Overview
 
