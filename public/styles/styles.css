@@ -71,6 +71,7 @@ em{
 
 img{
   cursor: pointer;
+  max-width: 100%;
 }
 
 label {
@@ -100,7 +101,7 @@ button {
   letter-spacing: .1rem;
   text-transform: uppercase;
   background-color: #1f3461;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #1f3461;
   cursor: pointer;
   box-shadow:3px 3px 3px #888888;
@@ -109,6 +110,16 @@ button {
 form {
   text-align: center;
   margin-top: 10px;
+}
+
+.search[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.search[type=text]:focus {
+    width: 100%;
 }
 
 body{
