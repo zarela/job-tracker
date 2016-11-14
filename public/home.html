@@ -7,8 +7,7 @@
     <div>
       <p>Position: {{job.position}}</p>
       <p>Company: {{job.company}}</p>
-      <p>Job Link: {{job.jobLink}}</p>
-      <!-- <a ng-href="{{job.jobLink}}" target="_self">{{job.jobLink}}</a> -->
+      <a href="http://{{job.jobLink}}" target="_blank">{{job.jobLink}}</a>
       <p>Applied?: {{job.applied}}</p>
       <p>Created At: {{job.createdAt | date:'short'}}</p>
       <p>Notes: {{job.notes}}</p>
