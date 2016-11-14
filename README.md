@@ -45,4 +45,5 @@ JobSchema{
 }
 ```
 ## Copyrights
-Logos are created by me and are saved in a images folder and also hosted on Imgur. 
+Logos are created by me.
+Images are saved in the images folder and also hosted on Imgur.
